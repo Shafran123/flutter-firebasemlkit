@@ -24,6 +24,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   File pickedImage;
+String re;
 
   bool isImageLoaded = false;
 
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       for (TextLine line in block.lines) {
         for (TextElement word in line.elements) {
           print(word.text);
+         //return re = word.text;
         }
       }
     }
@@ -87,9 +89,15 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: readText,
         ),
         RaisedButton(
+          
           child: Text('Read Bar Code'),
           onPressed: decode,
-        )
+        ),
+      //  Text(
+          
+       //  "$re"
+      //  ),
+    
       ],
     ));
   }
